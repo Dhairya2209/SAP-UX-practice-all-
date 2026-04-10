@@ -1,0 +1,46 @@
+{
+  "sap.app": {
+    "id": "ux402.fullscreen.demo",
+    "type": "application",
+    "title": "UX402 Fullscreen Demo",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {},
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "ux402.fullscreen.demo.view.View1",
+      "type": "XML",
+      "async": true,
+      "id": "view1"
+    },
+    "dependencies": {
+      "minUI5Version": "1.120.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "models": {
+      "flights": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data.json"
+      },
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ux402.fullscreen.demo.i18n.i18n"
+        }
+      }
+    }
+  }
+}

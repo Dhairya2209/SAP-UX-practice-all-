@@ -1,0 +1,17 @@
+<mvc:View
+    controllerName="demo.compo.project2.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <VBox class= "sapUiSmallMargin" width="20rem">
+
+    <Title text="required field validation" class="sapUiSmallMarginBottom"/>
+
+    <Input 
+        id="numberInput"
+        value="{/name}"
+        liveChange="onLiveChange"
+        placeholder="Enter name"/>
+
+    </VBox>
+</mvc:View>

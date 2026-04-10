@@ -1,0 +1,37 @@
+<mvc:View
+  controllerName="com.msginfo.messageinfo.controller.Main"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+
+  <Page id="mainPage" title="Validation Form">
+
+    <content>
+      <VBox id="mainVBox" class="sapUiSmallMargin" width="300px">
+
+        <!-- Email Input -->
+        <Input
+          id="emailInput"
+          placeholder="Enter Email"
+          liveChange=".onEmailChange" />
+
+        <!-- Number Input -->
+        <Input
+          id="numberInput"
+          placeholder="Enter Number"
+          liveChange=".onNumberChange"
+          class="sapUiSmallMarginTop"/>
+
+        <!-- Submit Button -->
+        <Button
+          id="submitBtn"
+          text="Submit"
+          press=".onSubmit"
+          type="Emphasized"
+          class="sapUiSmallMarginTop"/>
+
+      </VBox>
+    </content>
+
+  </Page>
+
+</mvc:View>

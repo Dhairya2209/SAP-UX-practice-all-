@@ -1,0 +1,11 @@
+{
+  "applications": {
+    "demo-app": {
+      "title": "Demo App",
+      "description": "Test App",
+      "additionalInformation": "SAPUI5.Component=ux402.fullscreen.demo",
+      "applicationType": "URL",
+      "url": "../"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:demo="demo.int.demoint.controls">
+
+    <VBox class="sapUiSmallMargin sapUiSmallPadding demoCoReqCard" width="300px">
+
+        <!-- Header -->
+        <Title text="Requisition {this>reqId}" level="H4" />
+
+        <!-- Basic Info -->
+        <Text text="Supplier: {this>supplier}" />
+        <Text text="Amount: {this>amount}" />
+
+        <!-- Contract -->
+        <Text text="{path: 'this>contractAvailable', formatter: '.formatter.getContractText'}" />
+
+        <!-- Risk Indicator -->
+        <demo:RiskIndicator
+            score="{this>riskScore}"
+            label="Supplier Risk"
+            threshold="70" />
+
+        <!-- Budget Progress -->
+        <ProgressIndicator
+            percentValue="{this>budgetPercent}"
+            displayValue="{this>budgetPercent}% Budget"
+            state="{path: 'this>budgetPercent', formatter: '.formatter.getBudgetState'}"
+            width="100%" />
+
+        <!-- Overdue Warning -->
+        <ObjectStatus
+            text="Overdue Delivery"
+            state="Error"
+            visible="{this>overdue}" />
+
+        <!-- Buttons -->
+        <HBox class="sapUiSmallMarginTop" justifyContent="SpaceBetween">
+            <Button
+                text="Approve"
+                type="Accept"
+                press="._onApproveAccepted" />
+
+
+        </HBox>
+
+    </VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,23 @@
+<mvc:View
+    controllerName="demo.custom.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:custom="demo.custom.control"
+    displayBlock="true">
+
+    <App id="app1">
+        <pages>
+            <Page id="page1" title="Custom Control Example">
+                <content>
+                    <VBox id="vbox1" class="sapUiSmallMargin">
+                        <Text id="txt1" text="Standard SAPUI5 Text" />
+
+                        <custom:MyText
+                            id="myCustomText"
+                            text="This is my custom control" />
+                    </VBox>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>

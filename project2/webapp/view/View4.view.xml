@@ -1,0 +1,18 @@
+<mvc:View
+    controllerName="demo.compo.project2.controller.View4"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <VBox class= "sapUiSmallMargin" width="20rem">
+
+    <Title text="dropdown bound to JSON Model" class="sapUiSmallMarginBottom"/>
+
+    <Input 
+        id="dynamicSelect"
+        selectedKey="{/selectedKey}"
+        items="{/drodownItems}"
+        change="onSelectionChange"/>
+
+    </VBox>
+</mvc:View>

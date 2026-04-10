@@ -1,0 +1,36 @@
+ <mvc:View
+    controllerName="demo.int.demoint.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:demo="demo.int.demoint.controls">
+    <App >
+    
+    <Page title="Purchase Requisition Approval">
+        <content>
+            <demo:RequisitionCard
+    reqId="PR-45001234"
+    supplier="Global Industrial Parts"
+    amount="INR 4,80,000"
+    riskScore="82"
+    contractAvailable="false"
+    budgetPercent="95"
+    overdue="true"
+    approve=".onApprove"
+    blocked=".onBlocked" />
+
+<demo:RequisitionCard
+    reqId="PR-45001235"
+    supplier="Trusted Metals Ltd."
+    amount="INR 1,25,000"
+    riskScore="28"
+    contractAvailable="true"
+    budgetPercent="40"
+    overdue="false"
+    approve=".onApprove"
+    blocked=".onBlocked" />
+        </content>
+    </Page>
+    
+    </App>
+
+</mvc:View>

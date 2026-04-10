@@ -1,0 +1,24 @@
+{
+  "sap.app": {
+    "id": "demo.int.demoint",
+    "type": "application",
+    "title": "Demo App"
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+
+    "dependencies": {
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {}
+      }
+    },
+
+    "rootView": {
+      "viewName": "demo.int.demoint.view.View1",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    }
+  }
+}
