@@ -1,0 +1,65 @@
+<mvc:View
+    controllerName="demo.itemdesc.itemdescription.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+<App id="app1">
+
+    <Page id="pageMain" title="Item Manager">
+        <content>
+
+            <!-- 🔹 FORM -->
+            <VBox class="sapUiSmallMargin">
+
+                <Input id="idItemId" placeholder="Item ID"/>
+                <Input id="idProductName" placeholder="Product Name"/>
+                <Input id="idProductPrice" type="Number" placeholder="Price"/>
+                <Input id="idStock" placeholder="Stock"/>
+                <Input id="idWarehouse" placeholder="Warehouse Location"/>
+                <Input id="idPlant" placeholder="Plant Location"/>
+                <Input id="idAsset" placeholder="Asset Code"/>
+
+                <Button text="Create" press="onSubmit" type="Emphasized"/>
+
+            </VBox>
+
+            <!-- 🔹 ACTION BUTTONS -->
+            <HBox class="sapUiSmallMarginTop">
+                <Button text="Update" press="onUpdatePress"/>
+                <Button text="Delete" press="onDeletePress"/>
+            </HBox>
+
+            <!-- 🔹 TABLE -->
+            <Table
+                id="idTable"
+                items="{/Items}"
+                mode="SingleSelectLeft"
+                class="sapUiSmallMarginTop">
+
+                <columns>
+                    <Column><Text text="ItemId"/></Column>
+                    <Column><Text text="Product"/></Column>
+                    <Column><Text text="Price"/></Column>
+                    <Column><Text text="Stock"/></Column>
+                    <Column><Text text="Warehouse"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ItemId}"/>
+                            <Text text="{ProductName}"/>
+                            <Text text="{ProductPrice}"/>
+                            <Text text="{InStock}"/>
+                            <Text text="{WarehouseLocation}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+            </Table>
+
+        </content>
+    </Page>
+
+</App>
+</mvc:View>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+
+    <edmx:DataServices m:DataServiceVersion="2.0">
+
+        <Schema Namespace="ZStudentService"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+            xmlns:sap="http://www.sap.com/Protocols/SAPData">
+
+            <EntityType Name="Student">
+                <Key>
+                    <PropertyRef Name="StudentID"/>
+                </Key>
+                <Property Name="StudentID" Type="Edm.String" Nullable="false"/>
+                <Property Name="StudentName" Type="Edm.String"/>
+                <Property Name="City" Type="Edm.String"/>
+                <Property Name="Country" Type="Edm.String"/>
+            </EntityType>
+
+            <EntityContainer Name="Container" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="StudentSet" EntityType="ZStudentService.Student"/>
+            </EntityContainer>
+
+        </Schema>
+
+    </edmx:DataServices>
+</edmx:Edmx>

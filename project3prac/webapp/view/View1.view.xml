@@ -1,0 +1,35 @@
+<mvc:View controllerName="demo.prac.project3prac.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    
+    <Page id="page1" title="Simple Dashboard">
+        <content>
+            <VBox 
+                id="vbox1"
+                class="sapUiSmallMargin" 
+                alignItems="Center">
+
+                <GenericTile 
+                    id="tile1"
+                    header="Employees"
+                    subheader="Total Count"
+                    press="onTilePress">
+
+                    <tileContent>
+                        <TileContent id="tileContent1">
+                            <content>
+                                <NumericContent 
+                                    id="numeric1"
+                                    value="150"
+                                    valueColor="Good"/>
+                            </content>
+                        </TileContent>
+                    </tileContent>
+
+                </GenericTile>
+
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>

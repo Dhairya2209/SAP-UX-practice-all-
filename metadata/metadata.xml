@@ -1,0 +1,23 @@
+<edmx:Edmx Version="1.0"
+ xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+ <edmx:DataServices>
+  <Schema Namespace="ZStudentService"
+   xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+
+   <EntityType Name="Student">
+    <Key>
+     <PropertyRef Name="StudentID"/>
+    </Key>
+    <Property Name="StudentID" Type="Edm.String"/>
+    <Property Name="StudentName" Type="Edm.String"/>
+    <Property Name="City" Type="Edm.String"/>
+    <Property Name="Country" Type="Edm.String"/>
+   </EntityType>
+
+   <EntityContainer Name="Container">
+    <EntitySet Name="StudentSet" EntityType="ZStudentService.Student"/>
+   </EntityContainer>
+
+  </Schema>
+ </edmx:DataServices>
+</edmx:Edmx>
